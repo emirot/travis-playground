@@ -24,4 +24,4 @@ jobs:
       dist: bionic
       python: 3.8
       script:
-        - python -m unittest test/*.py
+        - python -m unittest tests/*.py
