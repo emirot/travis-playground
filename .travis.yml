@@ -3,10 +3,6 @@ language: python
 services:
   - docker
 
-python:
-  - "3.6"      # current default Python on Travis CI
-  - "3.7"
-  - "3.8"
 # command to install dependencies
 install:
   - pip install -r requirements.txt
@@ -28,4 +24,4 @@ jobs:
       dist: bionic
       python: 3.8
       script:
-        - python -m unittest
+        - python -m unittest test/*.py
