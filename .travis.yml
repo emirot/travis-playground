@@ -12,11 +12,17 @@ install:
 stages:
   - lint
   - test
-
-script:
-  - stage: lint
-    script: flake8 *.py
-#   - stage: Tests
-#     script: echo "run test here"
-#   - stage: deploy
-#     script: echo "Deploy"
+  
+jobs:
+  include:
+    - stage: lint
+      name: linting
+      script:
+        - flake8 *.py
+    - stage: test
+      name: test
+      dist: bionic
+      python: 3.8
+      script:
+        - pip3 install -U --pre black
+        - black --check .
