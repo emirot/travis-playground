@@ -10,7 +10,3 @@ install:
 script:
   - stage: Linting
     script: flake8 *.py
-#   - stage: Tests
-#     script: echo "run test here"
-#   - stage: deploy
-#     script: echo "Deploy"
