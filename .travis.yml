@@ -21,7 +21,7 @@ jobs:
         - flake8 *.py
     - stage: test
       name: test
-      dist: bionic
-      python: 3.8
+#       dist: bionic
+#       python: 3.8
       script:
         - python -m unittest
