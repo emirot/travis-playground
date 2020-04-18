@@ -9,9 +9,8 @@ install:
 # command to run tests
 script:
   - stage: Linting
-    script: echo "Fake linting"
-    script: echo "another thing"
-  - stage: Tests
-    script: echo "run test here"
-  - stage: deploy
-    script: echo "Deploy"
+    script: flake8 *.py
+#   - stage: Tests
+#     script: echo "run test here"
+#   - stage: deploy
+#     script: echo "Deploy"
