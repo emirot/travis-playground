@@ -24,5 +24,4 @@ jobs:
       dist: bionic
       python: 3.8
       script:
-        - pip3 install -U --pre black
-        - black --check .
+        - python -m unittest
