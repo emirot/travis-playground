@@ -29,5 +29,6 @@ jobs:
     - stage: deploy
       name: deploy
       provider: pypi
+      script: echo "test"
       on:
         tags: true
