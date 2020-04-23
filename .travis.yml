@@ -26,8 +26,8 @@ jobs:
       python: 3.8
       script:
         - python -m unittest tests/*.py
-     - stage: deploy
-       name: deploy
-       provider: pypi
-       on:
-         tags: true
+    - stage: deploy
+      name: deploy
+      provider: pypi
+      on:
+        tags: true
