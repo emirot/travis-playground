@@ -30,8 +30,6 @@ jobs:
         - python -m unittest tests/*.py
     - stage: deploy
       name: deploy
+      if: tag IS present
       provider: pypi
       script: echo "test"
-      on:
-        tags: true
-        branch: master
