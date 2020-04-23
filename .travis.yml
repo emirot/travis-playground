@@ -13,9 +13,7 @@ stages:
   - lint
   - test
   - deploy
-    if: type = push
 
-  
 jobs:
   include:
     - stage: lint
